@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminTambahDigital"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Upload Koleksi Digital"/>
+
+
+    <EditText
+        android:id="@+id/et_digitalnama"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:hint="Masukan Nama File "
+        android:paddingLeft="30dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_pilihdigital"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded"
+            android:text="Pilih file"/>
+
+
+        <TextView
+            android:layout_below="@+id/btn_pilihdigital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="File Format : PDF"
+            android:layout_marginLeft="25dp"
+            android:textColor="#FF0000"/>
+
+        <ImageView
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/btn_pilihdigital"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/imgdigital"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tint="#ff0000"
+            android:src="@drawable/ic_pdf"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_uploaddigital"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
+        android:backgroundTint="#03A9F4"
+        android:text="Upload"
+        android:textSize="20dp"
+        android:textColor="#fff"/>
+
+</LinearLayout>

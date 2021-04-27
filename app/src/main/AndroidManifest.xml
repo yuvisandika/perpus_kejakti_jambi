@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.perpus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".AdminEditBuku"></activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".AdminHome" />
+        <activity android:name=".AdminKoleksiBuku" />
+        <activity android:name=".AdminTambahKoleksiBuku" />
+        <activity android:name=".BukuViewActivity" />
+        <activity android:name=".AdminKoleksiDigital" />
+        <activity android:name=".AdminTambahDigital" />
+        <activity android:name=".EbookViewActivity" />
+        <activity android:name=".AdminAnggota" />
+        <activity android:name=".AdminAnggotaView" />
+        <activity android:name=".AdminTambahAnggota" />
+        <activity android:name=".AdminPeminjaman" />
+        <activity android:name=".AdminTambahPeminjaman" />
+        <activity
+            android:name=".AdminEditPeminjaman"
+            android:theme="@style/AppTheme.PopupTheme" />
+        <activity android:name=".UserHome" />
+        <activity android:name=".UserKoleksiBuku" />
+        <activity android:name=".UserKoleksiDigital" />
+        <activity android:name=".About" />
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1004555770879",
+    "firebase_url": "https://perpus-d52ec.firebaseio.com",
+    "project_id": "perpus-d52ec",
+    "storage_bucket": "perpus-d52ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004555770879:android:6105cb0718bbdc1c2b25ca",
+        "android_client_info": {
+          "package_name": "com.example.perpus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004555770879-pv212rlob45bue6t1rlh4gu8uklg26us.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.perpus",
+            "certificate_hash": "826488fd46ac703fb7819bc7cd8e71fc455e3120"
+          }
+        },
+        {
+          "client_id": "1004555770879-oh8ivp67ob6af4pk93gspjqj60fbpcuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDdcr0oUx0HZZWpiI_ti6zqslhEkiY3jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004555770879-oh8ivp67ob6af4pk93gspjqj60fbpcuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

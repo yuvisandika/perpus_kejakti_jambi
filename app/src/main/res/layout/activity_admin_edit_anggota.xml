@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_below="@+id/imganggota"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--nama anggota-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Nama Anggota : "/>
+                <EditText
+                    android:id="@+id/nama"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_toRightOf="@id/ic_buku"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#009933"
+                    android:hint=". . . . . . . . . ."/>
+
+                <!--Jenis Kelamin-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Jenis Kelamin : "/>
+
+                <EditText
+                    android:id="@+id/jenkel"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#009933"/>
+                <!--email-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Email : "/>
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_toRightOf="@id/ic_buku"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#009933"
+                    android:hint=". . . . . . . . . ."/>
+
+                <!--NIP-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="NIP : "/>
+                <EditText
+                    android:id="@+id/nip"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_toRightOf="@id/ic_buku"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#009933"
+                    android:hint=". . . . . . . . . ."/>
+                <!--nomor telpon-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Nomor Telpon : "/>
+                <EditText
+                    android:id="@+id/notelp"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_toRightOf="@id/ic_buku"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#009933"
+                    android:inputType="number"
+                    android:hint=". . . . . . . . . ."/>
+                <!--nomor telpon-->
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Alamat : "/>
+                <EditText
+                    android:id="@+id/alamat"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_toRightOf="@id/ic_buku"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#009933"
+                    android:hint=". . . . . . . . . ."/>
+
+                <!--progresbar-->
+                <TextView
+                    android:id="@+id/txtprogres"
+                    android:layout_below="@id/keterangan"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    />
+                <ProgressBar
+                    android:id="@+id/progresbar"
+                    android:layout_below="@+id/txtprogres"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_below="@+id/progresbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="#fff"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text="Update"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminTambahKoleksiBuku"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <!--gambar buku-->
+            <ImageView
+                android:id="@+id/imgbuku"
+                android:layout_marginTop="30dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_buku"
+                android:background="@drawable/textview_border"
+                android:padding="10dp"/>
+            <ImageView
+                android:id="@+id/camadd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_camera"
+                android:layout_alignParentEnd="true"/>
+            <!--judul buku-->
+            <EditText
+                android:id="@+id/title"
+                android:layout_below="@+id/imgbuku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:hint="Isi Judul Buku"/>
+
+            <!--judul bahan pustaka-->
+            <ImageView
+                android:id="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/title"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_buku"/>
+            <TextView
+                android:id="@+id/jenis1"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Jenis Bahan Pustaka : "/>
+            <TextView
+                android:id="@+id/txtspinner"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/jenis1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:text="Pilih Bahan Pustaka "
+                android:visibility="gone"/>
+            <Spinner
+                android:id="@+id/jenis"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/jenis1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"/>
+
+            <!--nomor urut buku-->
+            <ImageView
+                android:id="@+id/ic_nomor"
+                android:layout_below="@+id/jenis"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_nomor"/>
+            <TextView
+                android:id="@+id/nomor1"
+                android:layout_below="@+id/jenis"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Nomor Urut Buku : "/>
+            <EditText
+                android:id="@+id/nomor"
+                android:layout_below="@+id/nomor1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:inputType="number"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--Kepengarangan-->
+            <ImageView
+                android:id="@+id/ic_kepengarangan"
+                android:layout_below="@+id/nomor"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_buku"/>
+            <TextView
+                android:id="@+id/kepengarangan1"
+                android:layout_below="@+id/nomor"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Kepengarangan : "/>
+            <EditText
+                android:id="@+id/kepengarangan"
+                android:layout_below="@+id/kepengarangan1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--jilid-->
+            <ImageView
+                android:id="@+id/ic_jilid"
+                android:layout_below="@+id/kepengarangan"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_buku"/>
+            <TextView
+                android:id="@+id/jilid1"
+                android:layout_below="@+id/kepengarangan"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Jilid : "/>
+            <EditText
+                android:id="@+id/jilid"
+                android:layout_below="@+id/jilid1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--edisi-->
+            <ImageView
+                android:id="@+id/ic_edisi"
+                android:layout_below="@+id/jilid"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_buku"/>
+            <TextView
+                android:id="@+id/edisi1"
+                android:layout_below="@+id/jilid"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Edisi : "/>
+            <EditText
+                android:id="@+id/edisi"
+                android:layout_below="@+id/edisi1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--cetakan-->
+            <ImageView
+                android:id="@+id/ic_cetakan"
+                android:layout_below="@+id/edisi"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_print"/>
+            <TextView
+                android:id="@+id/cetakan1"
+                android:layout_below="@+id/edisi"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Cetakan : "/>
+            <EditText
+                android:id="@+id/cetakan"
+                android:layout_below="@+id/cetakan1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--i.s.b.n-->
+            <ImageView
+                android:id="@+id/ic_isbn"
+                android:layout_below="@+id/cetakan"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_about"/>
+            <TextView
+                android:id="@+id/isbn1"
+                android:layout_below="@+id/cetakan"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="I.S.B.N : "/>
+            <EditText
+                android:id="@+id/isbn"
+                android:layout_below="@+id/isbn1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint="000-000-000-00-0"/>
+
+            <!--i.s.s.n-->
+            <ImageView
+                android:id="@+id/ic_issc"
+                android:layout_below="@+id/isbn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_about"/>
+            <TextView
+                android:id="@+id/issn1"
+                android:layout_below="@+id/isbn"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="I.S.S.N : "/>
+            <EditText
+                android:id="@+id/issn"
+                android:layout_below="@+id/issn1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--tempat terbit-->
+            <ImageView
+                android:id="@+id/ic_tempat"
+                android:layout_below="@+id/issn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_loc"/>
+            <TextView
+                android:id="@+id/tempat1"
+                android:layout_below="@+id/issn"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Tempat Terbit : "/>
+            <EditText
+                android:id="@+id/tempat"
+                android:layout_below="@+id/tempat1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--penerbit-->
+            <ImageView
+                android:id="@+id/ic_penerbit"
+                android:layout_below="@+id/tempat"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_orang"/>
+            <TextView
+                android:id="@+id/penerbit1"
+                android:layout_below="@+id/tempat"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Penerbit : "/>
+            <EditText
+                android:id="@+id/penerbit"
+                android:layout_below="@+id/penerbit1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--tahun Terbit-->
+            <ImageView
+                android:id="@+id/ic_tahun"
+                android:layout_below="@+id/penerbit"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_date"/>
+            <TextView
+                android:id="@+id/tahun1"
+                android:layout_below="@+id/penerbit"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Tahun Terbit : "/>
+            <EditText
+                android:id="@+id/tahun"
+                android:layout_below="@+id/tahun1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:inputType="number"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--nomor klasifikasi-->
+            <ImageView
+                android:id="@+id/ic_klasifikasi"
+                android:layout_below="@+id/tahun"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_nomor"/>
+            <TextView
+                android:id="@+id/klasifikasi1"
+                android:layout_below="@+id/tahun"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Nomor Klasifikasi : "/>
+            <EditText
+                android:id="@+id/klasifikasi"
+                android:layout_below="@+id/klasifikasi1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--berasal dari-->
+            <ImageView
+                android:id="@+id/ic_berasal"
+                android:layout_below="@+id/klasifikasi"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_orang"/>
+            <TextView
+                android:id="@+id/berasal1"
+                android:layout_below="@+id/klasifikasi"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Berasal Dari : "/>
+            <EditText
+                android:id="@+id/berasal"
+                android:layout_below="@+id/berasal1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--keterangan-->
+            <ImageView
+                android:id="@+id/ic_keterangan"
+                android:layout_below="@+id/berasal"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_about"/>
+            <TextView
+                android:id="@+id/keterangan1"
+                android:layout_below="@+id/berasal"
+                android:layout_toRightOf="@+id/ic_buku"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Keterangan : "/>
+            <EditText
+                android:id="@+id/keterangan"
+                android:layout_below="@+id/keterangan1"
+                android:layout_toRightOf="@id/ic_buku"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#009933"
+                android:hint=". . . . . . . . . ."/>
+
+            <!--Button-->
+            <!--progress bar-->
+            <TextView
+                android:id="@+id/txtprogres"
+                android:layout_below="@id/keterangan"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:gravity="center"
+                android:textSize="20dp"
+                />
+            <ProgressBar
+                android:id="@+id/progresbar"
+                android:layout_below="@+id/txtprogres"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnsave"
+                android:layout_below="@+id/progresbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="UPLOAD"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
